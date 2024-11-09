@@ -3,16 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>El Basurero de Conocimiento</title>
-    <link rel="stylesheet" href="index.css">
+    <style>
+    body{
+        background-image:url("nube.jpg");
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1{
+        color:blue;
+        font-size:50px;
+        font-family:georgia;
+        text-align:center;
+    }
+    h2{
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: red;
+    }
+    ul{
+        list-style-type: none;
+        text-align:center;
+        color: cyan;
+    }
+    li, a:visited{
+        font-size:20px;
+        text-align:center;
+        color: cyan;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-adsense-account" content="ca-pub-1742228779698694">
 </head>
 <body>
-    <p>Bienvenidos a mi Basurero de Conocimiento</p>
+    <h1>Bienvenidos a mi Basurero de Conocimiento</h1>
     <center><img src="Utsuro.png" alt="Master Utsuro by Charlotte" width="600" heigth="600"></center>
     <ul>
         <li><a href="rpgs.html">TierList de los mejores RPGés surrealistas, de terror, en RPG Maker</a></li>
+        <br>
         <li><a href="historias.html">Ensayos, escritos, historias, etc.</a></li>
+        <br>
+        <li><a href="donpheebin.html">English Translation of Thai Metal Band 'Donpheebin'</a></li>
     </ul>
+
+    <h2 class="numero">Visitantes:  </h2>
     <center><a href="https://www.flagcounter.me/details/e2j"><img src="https://www.flagcounter.me/e2j/" alt="Flag Counter"></a></center>
+    <script>
+        const numero = document.querySelector(".numero");
+        let i = localStorage.length;
+        document.addEventListener("DOMContentLoaded", e=>{
+            localStorage.setItem(i.toString(), i.toString());
+            numero.innerText += " " + localStorage.length;
+        });
+    </script>
 </body>
 </html>
